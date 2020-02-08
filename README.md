@@ -1,4 +1,4 @@
-# YTPlayer 
+# BetterLinkify 
 
 When android:autoLink="all" or Linkify.addLinks(textView, Linkify.ALL) is used to add links to web URLs, phone-numbers, map addresses or email addresses in a TextView, Android uses a class known as LinkMovementMethod that handles highlighting links when they're focused and dispatching an Intent when they're clicked.
 
@@ -8,7 +8,7 @@ BetterLinkify improves over Hyperlinks, shown below:
 
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/appsfeaturebetter-linkify/master/screenshots/preview.png" alt="Preview 1" width="200" /> 
+  <img src="https://raw.githubusercontent.com/appsfeature/better-linkify/master/screenshots/preview.png" alt="Preview 1" width="200" /> 
 </p>
   
 ## Setup Project
