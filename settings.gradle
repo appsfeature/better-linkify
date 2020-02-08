@@ -1,0 +1,2 @@
+include ':app', ':linkify'
+rootProject.name='BetterLinkify'
