@@ -6,6 +6,8 @@ When android:autoLink="all" or Linkify.addLinks(textView, Linkify.ALL) is used t
   <img src="https://raw.githubusercontent.com/appsfeature/better-linkify/master/screenshots/preview.png" alt="Preview 1" width="350" /> 
 </p>
 
+Hyperlinks are not working with Linkify.addLinks(Linkify.ALL) method, which is now fixed in our library. 
+
 BetterLinkify improves over Hyperlinks, like shown below:
 
 ```html 
