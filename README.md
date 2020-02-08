@@ -9,12 +9,12 @@ When android:autoLink="all" or Linkify.addLinks(textView, Linkify.ALL) is used t
 BetterLinkify improves over Hyperlinks, like shown below:
 
 ```html 
- String yourText = "Clicks are reported across all platforms. 
-Learn more <a href='https://www.google.com'><strong>Click here</strong></a> 
-<p><br>Please contact us on:- 
-<br><br>MobileNo:9891983694 
-<br>Email-ID:alpha@gmail.com <br>
-<br>Reference:http://google.com</p>";
+String yourText = "Clicks are reported across all platforms. 
+        Learn more <a href='https://www.google.com'><strong>Click here</strong></a> 
+        <p><br>Please contact us on:- 
+        <br><br>MobileNo:9891983694 
+        <br>Email-ID:alpha@gmail.com <br>
+        <br>Reference:http://google.com</p>";
 ```
 
   
@@ -50,11 +50,11 @@ dependencies {
 #### In your layout.xml file:
 ```xml 
 
-    <com.linkify.TextViewLinkify
-        android:id="@+id/tv_linkify"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-                                
+<com.linkify.TextViewLinkify
+    android:id="@+id/tv_linkify"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
 ```
 
 #### In your activity class:
