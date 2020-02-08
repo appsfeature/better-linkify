@@ -2,10 +2,6 @@
 
 When android:autoLink="all" or Linkify.addLinks(textView, Linkify.ALL) is used to add links to web URLs, phone-numbers, map addresses or email addresses in a TextView, Android uses a class known as LinkMovementMethod that handles highlighting links when they're focused and dispatching an Intent when they're clicked.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/appsfeature/better-linkify/master/screenshots/preview.png" alt="Preview 1" width="350" /> 
-</p>
-
 ##### Hyperlinks are not working with Linkify.addLinks(Linkify.ALL) method, which is now fixed in our library. 
 
 BetterLinkify improves over Hyperlinks, like shown below:
@@ -18,6 +14,10 @@ String yourText = "Clicks are reported across all platforms.
         <br>Email-ID:alpha@gmail.com <br>
         <br>Reference:http://google.com</p>";
 ```
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/appsfeature/better-linkify/master/screenshots/preview.png" alt="Preview 1" width="350" /> 
+</p>
 
   
 ## Setup Project
