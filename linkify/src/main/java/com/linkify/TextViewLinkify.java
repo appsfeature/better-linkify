@@ -5,7 +5,6 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.method.LinkMovementMethod;
-import android.text.style.ClickableSpan;
 import android.text.style.URLSpan;
 import android.text.util.Linkify;
 import android.util.AttributeSet;
@@ -13,12 +12,6 @@ import android.widget.TextView;
 
 import com.linkify.callable.UrlClickableSpan;
 
-
-/**
- * Remove both from xml resource file if added
- * android:linksClickable="true"
- * android:autoLink="web"
- */
 public class TextViewLinkify extends TextView {
 
     public TextViewLinkify(Context context) {
@@ -42,10 +35,6 @@ public class TextViewLinkify extends TextView {
         setAutoLinkMask(0x00);
     }
 
-    @Override
-    public void setText(CharSequence text, BufferType type) {
-        super.setText(text, type);
-    }
 
     public void addLinks(int linkifyMask) {
         setHyperLinkClickableSpan();
@@ -53,20 +42,26 @@ public class TextViewLinkify extends TextView {
     }
 
     private void setHyperLinkClickableSpan() {
-        Spannable sp = new SpannableString(getText());
-        int end = sp.length();
-        URLSpan[] urls = sp.getSpans(0, end, URLSpan.class);
+        setText(getSpannableStringBuilder(new SpannableString(getText())));
+    }
+
+    private SpannableStringBuilder getSpannableStringBuilder(Spannable sp) {
         SpannableStringBuilder style = new SpannableStringBuilder(sp);
         style.clearSpans();
-        for (URLSpan urlSpan : urls) {
-            ClickableSpan myURLSpan = new UrlClickableSpan(urlSpan.getURL());
-            int start = sp.getSpanStart(urlSpan);
-            int endPos = sp.getSpanEnd(urlSpan);
-            style.setSpan(myURLSpan, start,
-                    endPos,
+        setEnableAllHyperLinkClickable(style, sp);
+        return style;
+    }
+
+    private void setEnableAllHyperLinkClickable(SpannableStringBuilder style, Spannable sp) {
+        for (URLSpan urlSpan : getURLSpan(sp)) {
+            style.setSpan(new UrlClickableSpan(urlSpan.getURL()), sp.getSpanStart(urlSpan),
+                    sp.getSpanEnd(urlSpan),
                     Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
 
         }
-        setText(style);
+    }
+
+    private URLSpan[] getURLSpan(Spannable sp) {
+        return sp.getSpans(0, sp.length(), URLSpan.class);
     }
 }
