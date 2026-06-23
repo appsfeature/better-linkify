@@ -10,7 +10,7 @@ BetterLinkify improves over Hyperlinks, like shown below:
 String yourText = "Clicks are reported across all platforms. 
         Learn more <a href='https://www.google.com'><strong>Click here</strong></a> 
         <p><br>Please contact us on:- 
-        <br><br>MobileNo:9891983694 
+        <br><br>MobileNo:999999999
         <br>Email-ID:alpha@gmail.com <br>
         <br>Reference:http://google.com</p>";
 ```
@@ -63,7 +63,7 @@ dependencies {
 ```java 
 public class MainActivity extends AppCompatActivity {
 
-    String yourText = "Clicks are reported across all platforms. Learn more <a href='https://www.google.com'><strong>Click here</strong></a> <p><br>Please contact us on:- <br><br>MobileNo:9891983694 <br>Email-ID:alpha@gmail.com <br><br>Reference:http://google.com</p>";
+    String yourText = "Clicks are reported across all platforms. Learn more <a href='https://www.google.com'><strong>Click here</strong></a> <p><br>Please contact us on:- <br><br>MobileNo:999999999<br>Email-ID:alpha@gmail.com <br><br>Reference:http://google.com</p>";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
